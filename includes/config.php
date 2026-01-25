@@ -1,5 +1,7 @@
-<?php
-// includes/config.php
+  "name" => "Skandiva Intyg",
+  "phone" => "0700-23-00-23",
+  "email" => "hej@skadivaityg.se",
+
 
 $SITE = [
   "name" => "Medicinska intyg Sverige",
