@@ -1,3 +1,5 @@
+<?php
+
 $SERVICES = [
   [
     "title" => "Körkortsintyg",
@@ -33,7 +35,7 @@ $SERVICES = [
     "price" => "495 kr",
     "time"  => "",
     "tag"   => "idrott",
-  ]
+  ],
 ];
 
 $LOCATIONS = [
@@ -42,14 +44,8 @@ $LOCATIONS = [
     "address" => "Street 514",
     "zip" => "514 Tranemo",
     "phone" => "+46 00 000 000",
-  ]
+  ],
 ];
-    "tag"   => "korkort",
-  ]
-];
-
-$LOCATIONS = [
-  [
     "city" => "Tranemo",
     "address" => "Tranemovagen 1",
     "zip" => "123 45 Tranemo",
