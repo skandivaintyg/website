@@ -1,3 +1,9 @@
+<?php
+$page_title = "Skandiva Intyg AB";
+require_once __DIR__ . "/includes/data.php";
+require_once __DIR__ . "/includes/header.php";
+?>
+
 <main class="hero">
   <div class="container hero-grid">
     <div>
@@ -16,7 +22,7 @@
     </div>
 
     <aside class="hero-card" aria-label="Kontaktinformation">
-      <h3>kontaktinformation</h3>
+      <h3>Kontaktinformation</h3>
       <div class="contact-list">
         <div><strong>Telefonnummer:</strong> <?= h($SITE["phone"]) ?></div>
         <div><strong>Mejladress:</strong> <?= h($SITE["email"]) ?></div>
@@ -26,6 +32,8 @@
     </aside>
   </div>
 </main>
+
+<section>
   <div class="container">
     <div class="section-title">
       <h2>Om oss</h2>
@@ -108,7 +116,7 @@
         <div class="price"><?= h($SITE["phone"]) ?></div>
       </div>
       <div class="card">
-        <h3>kontaktinformation</h3>
+        <h3>Kontaktinformation</h3>
         <div class="contact-list">
           <div><strong>Telefonnummer:</strong> <?= h($SITE["phone"]) ?></div>
           <div><strong>Mejladress:</strong> <?= h($SITE["email"]) ?></div>
@@ -120,99 +128,18 @@
   </div>
 </section>
 
-        </select>
-
-        <button class="btn btn-primary" type="submit">Sök</button>
-
-        <div class="tiny">Tips: ring oss om du har extra bråttom.</div>
-
-      </form>
-
-    </aside>
-
-  </div>
-
-</main>
-
-
-
 <section>
-
   <div class="container">
-
-    <div class="section-title">
-
-      <h2>Våra vanligaste tjänster</h2>
-
-      <div class="muted" style="font-weight:800;">Tryck “Boka” för att komma vidare</div>
-
-    </div>
-
-
-
-    <div class="grid-3">
-
-      <?php foreach ($SERVICES as $s): ?>
-
-        <article class="card">
-
-          <h3><?= h($s["title"]) ?></h3>
-
-          <p><?= h($s["desc"]) ?></p>
-
-          <div class="card-footer">
-
-            <div>
-
-              <div class="price"><?= h($s["price"]) ?></div>
-
-              <div class="tiny"><?= h($s["time"]) ?></div>
-
-            </div>
-
-            <a class="btn btn-outline" href="/booking.php?service=<?= urlencode($s["title"]) ?>">Boka</a>
-
-          </div>
-
-        </article>
-
-      <?php endforeach; ?>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<section>
-
-  <div class="container">
-
-    <div style="margin-top: 10px;" class="cta">
-
+    <div class="cta" style="margin-top: 10px;">
       <div>
-
         <strong>Extra bråttom?</strong>
-
         <span>Ring oss så försöker vi hitta en tid som passar – ofta samma dag.</span>
-
       </div>
-
-      <a class="btn btn-outline" style="background:rgba(255,255,255,.14); border-color: rgba(255,255,255,.32); color:#fff;" href="tel:0851258800">
-
+      <a class="btn btn-outline" style="background:rgba(255,255,255,.14); border-color: rgba(255,255,255,.32); color:#fff;" href="tel:+46000000000">
         📞 Ring nu
-
       </a>
-
     </div>
-
   </div>
-
 </section>
-
-
 
 <?php require_once __DIR__ . "/includes/footer.php"; ?>
-
