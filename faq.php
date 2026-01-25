@@ -28,18 +28,3 @@ require_once __DIR__ . "/includes/header.php";
 </section>
 
 <?php require_once __DIR__ . "/includes/footer.php"; ?>
-
-      </div>
-      <div class="card">
-        <h3>Behöver jag ta med något?</h3>
-        <p>Legitimation och eventuella tidigare journal/handlingar om relevant.</p>
-      </div>
-      <div class="card">
-        <h3>Kan ni hjälpa med Transportstyrelsen?</h3>
-        <p>Ja, vi arbetar ofta med krav för körkortsintyg och kompletteringar.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<?php require_once __DIR__ . "/includes/footer.php"; ?>

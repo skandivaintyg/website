@@ -22,9 +22,3 @@ function site_url(string $path = ""): string {
 
   return $trimmed === "" ? $base . "/" : $base . "/" . $trimmed;
 }
-  return basename(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
-}
-
-function is_active(string $file): string {
-  return current_page() === $file ? "active" : "";
-}

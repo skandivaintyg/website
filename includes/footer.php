@@ -42,25 +42,3 @@
 
 </body>
 </html>
-
-      <div class="footer-list">
-        <a href="/booking.php#stockholm">Stockholm</a>
-        <a href="/booking.php#goteborg">Göteborg</a>
-        <a href="/booking.php#malmo">Malmö</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container" style="margin-top:18px; opacity:.7; font-weight:600; font-size:13px;">
-    © <?= date("Y") ?> <?= h($SITE["name"]) ?> • All rights reserved
-  </div>
-</footer>
-
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const panel = document.getElementById("mobilePanel");
-  hamburger?.addEventListener("click", () => panel.classList.toggle("open"));
-</script>
-
-</body>
-</html>

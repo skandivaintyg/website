@@ -52,28 +52,3 @@ require_once __DIR__ . "/functions.php";
       <a href="<?= h(site_url("faq.php")) ?>">FAQ</a>
     </div>
   </header>
-    <a class="brand" href="/index.php">
-      <div class="brand-badge" aria-hidden="true"></div>
-      <span><?= h($SITE["name"]) ?></span>
-    </a>
-
-    <nav class="nav-links" aria-label="Huvudmeny">
-      <a class="<?= is_active("services.php") ?>" href="/services.php">Läkarintyg</a>
-      <a class="<?= is_active("booking.php") ?>" href="/booking.php">Boka tid</a>
-      <a class="<?= is_active("company.php") ?>" href="/company.php">Företag</a>
-      <a class="<?= is_active("faq.php") ?>" href="/faq.php">FAQ</a>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="hamburger" id="hamburger" type="button" aria-label="Öppna meny">☰ Meny</button>
-      <a class="btn btn-primary" href="/booking.php">Boka tid</a>
-    </div>
-  </div>
-
-  <div class="container mobile-panel" id="mobilePanel" aria-label="Mobilmeny">
-    <a href="/services.php">Läkarintyg</a>
-    <a href="/booking.php">Boka tid</a>
-    <a href="/company.php">Företag</a>
-    <a href="/faq.php">FAQ</a>
-  </div>
-</header>
