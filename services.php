@@ -7,10 +7,17 @@ $q = trim($_GET["q"] ?? "");
 $filtered = $SERVICES;
 
 if ($q !== "") {
-  $q_lower = mb_strtolower($q);
-  $filtered = array_values(array_filter($SERVICES, function (array $s) use ($q_lower): bool {
-    return mb_strpos(mb_strtolower($s["title"]), $q_lower) !== false
-      || mb_strpos(mb_strtolower($s["desc"]), $q_lower) !== false;
+  $to_lower = function (string $value): string {
+    return function_exists("mb_strtolower") ? mb_strtolower($value) : strtolower($value);
+  };
+  $pos = function (string $haystack, string $needle): int|false {
+    return function_exists("mb_strpos") ? mb_strpos($haystack, $needle) : strpos($haystack, $needle);
+  };
+
+  $q_lower = $to_lower($q);
+  $filtered = array_values(array_filter($SERVICES, function (array $s) use ($q_lower, $to_lower, $pos): bool {
+    return $pos($to_lower($s["title"]), $q_lower) !== false
+      || $pos($to_lower($s["desc"]), $q_lower) !== false;
   }));
 }
 ?>
