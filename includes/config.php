@@ -6,5 +6,6 @@ $SITE = [
   "email" => "email@address.com",
   "website" => "skandivaintyg.com",
   "address" => "Street 514, Tranemo, Sweden",
+  "base_path" => "",
   "lang" => "sv",
 ];

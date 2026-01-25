@@ -1,4 +1,5 @@
-<?php
+      <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>">Boka tid</a>
+
 $page_title = "FAQ • Frågor & svar";
 require_once __DIR__ . "/includes/header.php";
 ?>

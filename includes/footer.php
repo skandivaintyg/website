@@ -1,8 +1,13 @@
-<?php
-// includes/footer.php
-require_once __DIR__ . "/config.php";
-?>
-<footer>
+        <a href="<?= h(site_url("booking.php")) ?>">Boka tid</a>
+        <a href="<?= h(site_url("services.php")) ?>">Läkarintyg</a>
+        <a href="<?= h(site_url("company.php")) ?>">Företag</a>
+        <a href="<?= h(site_url("faq.php")) ?>">Datapolicy</a>
+        <a href="<?= h(site_url("booking.php#stockholm")) ?>">Stockholm</a>
+        <a href="<?= h(site_url("booking.php#goteborg")) ?>">Göteborg</a>
+        <a href="<?= h(site_url("booking.php#malmo")) ?>">Malmö</a>
+      </div>
+    </div>
+
   <div class="container footer-grid">
     <div>
       <div class="footer-title"><?= h($SITE["name"]) ?></div>

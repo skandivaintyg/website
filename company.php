@@ -1,4 +1,5 @@
-<?php
+      <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>">Kontakta oss</a>
+        <a class="btn btn-primary" href="<?= h(site_url("booking.php")) ?>">Boka konsultation</a>
 $page_title = "Företag • Medicinska intyg";
 require_once __DIR__ . "/includes/header.php";
 ?>

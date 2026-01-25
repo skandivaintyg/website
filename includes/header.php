@@ -1,11 +1,19 @@
-<?php
-// includes/header.php
-require_once __DIR__ . "/config.php";
-require_once __DIR__ . "/functions.php";
-?>
-<!doctype html>
-<html lang="<?= h($SITE["lang"]) ?>">
-<head>
+  <link rel="stylesheet" href="<?= h(site_url("assets/style.css")) ?>">
+</head>
+<body>
+    <a class="brand" href="<?= h(site_url("index.php")) ?>">
+      <a class="<?= is_active("services.php") ?>" href="<?= h(site_url("services.php")) ?>">Läkarintyg</a>
+      <a class="<?= is_active("booking.php") ?>" href="<?= h(site_url("booking.php")) ?>">Boka tid</a>
+      <a class="<?= is_active("company.php") ?>" href="<?= h(site_url("company.php")) ?>">Företag</a>
+      <a class="<?= is_active("faq.php") ?>" href="<?= h(site_url("faq.php")) ?>">FAQ</a>
+    </nav>
+      <a class="btn btn-primary" href="<?= h(site_url("booking.php")) ?>">Boka tid</a>
+    <a href="<?= h(site_url("services.php")) ?>">Läkarintyg</a>
+    <a href="<?= h(site_url("booking.php")) ?>">Boka tid</a>
+    <a href="<?= h(site_url("company.php")) ?>">Företag</a>
+    <a href="<?= h(site_url("faq.php")) ?>">FAQ</a>
+  </div>
+</header>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title><?= h($page_title ?? $SITE["name"]) ?></title>

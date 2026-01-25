@@ -6,8 +6,8 @@
       <p>Enkelt · Snabbt · Korrekt</p>
 
       <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a class="btn btn-primary" href="/booking.php">Boka idag</a>
-        <a class="btn btn-outline" href="/services.php">Våra tjänster</a>
+        <a class="btn btn-primary" href="<?= h(site_url("booking.php")) ?>">Boka idag</a>
+        <a class="btn btn-outline" href="<?= h(site_url("services.php")) ?>">Våra tjänster</a>
       </div>
 
       <div style="margin-top:14px;">
@@ -86,7 +86,7 @@
                 <div class="tiny"><?= h($s["time"]) ?></div>
               <?php endif; ?>
             </div>
-            <a class="btn btn-outline" href="/booking.php?service=<?= urlencode($s["title"]) ?>">Boka</a>
+            <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>?service=<?= urlencode($s["title"]) ?>">Boka</a>
           </div>
         </article>
       <?php endforeach; ?>
@@ -120,51 +120,99 @@
   </div>
 </section>
 
-        </select>
-        <button class="btn btn-primary" type="submit">Sök</button>
-        <div class="tiny">Tips: ring oss om du har extra bråttom.</div>
-      </form>
-    </aside>
-  </div>
-</main>
-
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>Våra vanligaste tjänster</h2>
-      <div class="muted" style="font-weight:800;">Tryck “Boka” för att komma vidare</div>
-    </div>
-
-    <div class="grid-3">
-      <?php foreach ($SERVICES as $s): ?>
-        <article class="card">
-          <h3><?= h($s["title"]) ?></h3>
-          <p><?= h($s["desc"]) ?></p>
-          <div class="card-footer">
-            <div>
-              <div class="price"><?= h($s["price"]) ?></div>
-              <div class="tiny"><?= h($s["time"]) ?></div>
-            </div>
-            <a class="btn btn-outline" href="/booking.php?service=<?= urlencode($s["title"]) ?>">Boka</a>
-          </div>
-        </article>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div style="margin-top: 10px;" class="cta">
-      <div>
-        <strong>Extra bråttom?</strong>
-        <span>Ring oss så försöker vi hitta en tid som passar – ofta samma dag.</span>
-      </div>
-      <a class="btn btn-outline" style="background:rgba(255,255,255,.14); border-color: rgba(255,255,255,.32); color:#fff;" href="tel:0851258800">
-        📞 Ring nu
-      </a>
-    </div>
-  </div>
-</section>
-
-<?php require_once __DIR__ . "/includes/footer.php"; ?>
+        </select>
+
+        <button class="btn btn-primary" type="submit">Sök</button>
+
+        <div class="tiny">Tips: ring oss om du har extra bråttom.</div>
+
+      </form>
+
+    </aside>
+
+  </div>
+
+</main>
+
+
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Våra vanligaste tjänster</h2>
+
+      <div class="muted" style="font-weight:800;">Tryck “Boka” för att komma vidare</div>
+
+    </div>
+
+
+
+    <div class="grid-3">
+
+      <?php foreach ($SERVICES as $s): ?>
+
+        <article class="card">
+
+          <h3><?= h($s["title"]) ?></h3>
+
+          <p><?= h($s["desc"]) ?></p>
+
+          <div class="card-footer">
+
+            <div>
+
+              <div class="price"><?= h($s["price"]) ?></div>
+
+              <div class="tiny"><?= h($s["time"]) ?></div>
+
+            </div>
+
+            <a class="btn btn-outline" href="/booking.php?service=<?= urlencode($s["title"]) ?>">Boka</a>
+
+          </div>
+
+        </article>
+
+      <?php endforeach; ?>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section>
+
+  <div class="container">
+
+    <div style="margin-top: 10px;" class="cta">
+
+      <div>
+
+        <strong>Extra bråttom?</strong>
+
+        <span>Ring oss så försöker vi hitta en tid som passar – ofta samma dag.</span>
+
+      </div>
+
+      <a class="btn btn-outline" style="background:rgba(255,255,255,.14); border-color: rgba(255,255,255,.32); color:#fff;" href="tel:0851258800">
+
+        📞 Ring nu
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<?php require_once __DIR__ . "/includes/footer.php"; ?>
+
