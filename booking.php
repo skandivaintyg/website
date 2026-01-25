@@ -11,13 +11,20 @@ $selected_service = trim($_GET["service"] ?? "");
     <div class="section-title">
       <h2>Boka tid</h2>
       <div class="muted" style="font-weight:800;">Snabb bokning online</div>
-    </div>
-
-    <div class="split">
-      <div class="card">
-        <h3>Din bokning</h3>
-        <p>Välj tjänst och fyll i dina uppgifter. (Detta är en demo-layout som du kopplar till ditt bokningssystem.)</p>
-
+          <div class="tiny">📞 <?= h($SITE["phone"]) ?></div>
+          <div class="tiny">✉️ <?= h($SITE["email"]) ?></div>
+        </div>
+
+        <div style="margin-top:14px;" class="cta">
+          <div>
+            <strong>Behöver du en tid idag?</strong>
+            <span>Ring oss så försöker vi lösa det.</span>
+          </div>
+          <a class="btn btn-outline" style="background:rgba(255,255,255,.14); border-color: rgba(255,255,255,.32); color:#fff;" href="tel:+46000000000">
+            📞 Ring nu
+          </a>
+        </div>
+
         <form method="post" action="#" style="display:grid; gap:10px;">
           <select class="input" name="service">
             <option value="">Välj tjänst…</option>
