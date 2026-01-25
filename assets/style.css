@@ -614,6 +614,14 @@ footer{
 
 footer a:hover{ color: white; }
 
+.contact-list{
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--muted);
+}
+
 
 
 /* Responsive */
@@ -635,4 +643,3 @@ footer a:hover{ color: white; }
   .hamburger{ display:inline-flex; }
 
 }
-

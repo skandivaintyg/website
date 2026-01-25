@@ -1,5 +1,18 @@
-<?php
-// includes/functions.php
+function is_active(string $file): string {
+  return current_page() === $file ? "active" : "";
+}
+
+function site_url(string $path = ""): string {
+  $base = rtrim($GLOBALS["SITE"]["base_path"] ?? "", "/");
+  $trimmed = ltrim($path, "/");
+
+  if ($base === "") {
+    return $trimmed === "" ? "/" : "/" . $trimmed;
+  }
+
+  return $trimmed === "" ? $base . "/" : $base . "/" . $trimmed;
+}
+
 
 function h(string $text): string {
   return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');

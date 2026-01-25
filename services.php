@@ -1,14 +1,32 @@
-<?php
-$page_title = "Läkarintyg • Tjänster";
-require_once __DIR__ . "/includes/data.php";
-require_once __DIR__ . "/includes/header.php";
-
-$q = trim($_GET["q"] ?? "");
-$q_lower = mb_strtolower($q);
-
-$filtered = array_filter($SERVICES, function($s) use ($q_lower) {
-  if ($q_lower === "") return true;
-  return mb_strpos(mb_strtolower($s["title"]), $q_lower) !== false
+    <div class="section-title">
+      <h2>Våra tjänster</h2>
+      <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>">Boka tid</a>
+    </div>
+
+    <div class="card" style="margin-bottom:14px;">
+      <p>Vi erbjuder ett brett utbud av medicinska intyg som utfärdas effektivt och i enlighet med gällande regelverk.</p>
+    </div>
+      <form method="get" action="<?= h(site_url("services.php")) ?>" style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn btn-outline" href="<?= h(site_url("services.php")) ?>">Rensa</a>
+    <div class="grid-3">
+      <?php if (count($filtered) === 0): ?>
+        <div class="card">
+          <h3>Inga träffar</h3>
+          <p>Testa en annan sökning, t.ex. “körkort” eller “sjöfart”.</p>
+          <div class="card-footer">
+            <div>
+              <div class="price"><?= h($s["price"]) ?></div>
+              <?php if (!empty($s["time"])): ?>
+                <div class="tiny"><?= h($s["time"]) ?></div>
+              <?php endif; ?>
+            </div>
+            <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>?service=<?= urlencode($s["title"]) ?>">Boka</a>
+          </div>
+      <?php endforeach; ?>
+    </div>
+    <div class="muted" style="margin-top:12px; font-weight:700;">Andra medicinska intyg vid behov</div>
+  </div>
+</section>
       || mb_strpos(mb_strtolower($s["desc"]), $q_lower) !== false;
 });
 ?>
