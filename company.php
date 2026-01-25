@@ -30,19 +30,3 @@ require_once __DIR__ . "/includes/header.php";
 </section>
 
 <?php require_once __DIR__ . "/includes/footer.php"; ?>
-
-          Kontakta oss för paketpris och tider.
-        </p>
-        <div class="tiny">✉️ <?= h($SITE["email"]) ?></div>
-      </div>
-
-      <div class="card">
-        <h3>Så fungerar det</h3>
-        <p>1) Ni beskriver behovet → 2) vi föreslår upplägg → 3) bokning/leverans.</p>
-        <a class="btn btn-primary" href="/booking.php">Boka konsultation</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<?php require_once __DIR__ . "/includes/footer.php"; ?>
