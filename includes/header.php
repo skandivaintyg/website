@@ -30,8 +30,7 @@ require_once __DIR__ . "/lang.php";
           $separator = strpos($clean_url, '?') !== false ? '&' : '?';
           $toggle_url = $clean_url . $separator . 'lang=' . $toggle_lang;
         ?>
-        <a href="<?= h($toggle_url) ?>" class="chip lang-toggle"><?= h(t('lang_current')) ?></a>
-        <span class="chip">in LinkedIn</span>
+        <a href="<?= h($toggle_url) ?>" class="chip lang-toggle">🌐 <?= h(t('lang_current')) ?></a>
       </div>
     </div>
   </div>
