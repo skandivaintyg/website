@@ -260,17 +260,11 @@ a.chip.lang-toggle:hover{
 
 }
 
-.brand-badge{
-
-  width: 40px;
+.brand-logo{
 
   height: 40px;
 
-  border-radius: 12px;
-
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-
-  box-shadow: var(--shadow-sm);
+  width: auto;
 
 }
 

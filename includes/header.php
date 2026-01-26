@@ -38,8 +38,7 @@ require_once __DIR__ . "/lang.php";
   <header class="header">
     <div class="container nav">
       <a class="brand" href="<?= h(site_url("index.php")) ?>">
-        <div class="brand-badge" aria-hidden="true"></div>
-        <span><?= h($SITE["name"]) ?></span>
+        <img src="<?= h(site_url("assets/logo.svg")) ?>" alt="<?= h($SITE["name"]) ?>" class="brand-logo" />
       </a>
 
       <nav class="nav-links" aria-label="<?= h(t('nav_main_menu')) ?>">
