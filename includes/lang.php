@@ -121,6 +121,7 @@ $TRANSLATIONS = [
   'faq_a3' => ['sv' => 'Ja, vi arbetar ofta med krav för körkortsintyg och kompletteringar.', 'en' => 'Yes, we often work with driving license certificate requirements and supplements.'],
 
   // Footer
+  'org_number' => ['sv' => 'Organisationsnummer', 'en' => 'Organization number'],
   'footer_quick_links' => ['sv' => 'Snabblänkar', 'en' => 'Quick Links'],
   'footer_locations' => ['sv' => 'Mottagningar', 'en' => 'Locations'],
   'footer_data_policy' => ['sv' => 'Datapolicy', 'en' => 'Data Policy'],

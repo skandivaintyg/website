@@ -30,7 +30,7 @@
   </div>
 
   <div class="container" style="margin-top:18px; opacity:.7; font-weight:600; font-size:13px;">
-    © <?= date("Y") ?> <?= h($SITE["name"]) ?> • <?= h(t('footer_rights')) ?>
+    © <?= date("Y") ?> <?= h($SITE["name"]) ?> • <?= h(t('org_number')) ?>: 559564-3825 • <?= h(t('footer_rights')) ?>
   </div>
 </footer>
 
