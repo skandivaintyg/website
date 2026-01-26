@@ -1,29 +1,26 @@
 <?php
-$page_title = "Företag • Medicinska intyg";
 require_once __DIR__ . "/includes/header.php";
+$page_title = t('page_title_company');
 ?>
 
 <section>
   <div class="container">
     <div class="section-title">
-      <h2>Företag</h2>
-      <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>">Kontakta oss</a>
+      <h2><?= h(t('company_title')) ?></h2>
+      <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>"><?= h(t('contact_us_btn')) ?></a>
     </div>
 
     <div class="split">
       <div class="card">
-        <h3>Avtal & volymer</h3>
-        <p>
-          Vi kan hjälpa företag med planerade hälsoundersökningar och läkarintyg.
-          Kontakta oss för paketpris och tider.
-        </p>
-        <div class="tiny">✉️ <?= h($SITE["email"]) ?></div>
+        <h3><?= h(t('agreements_volumes')) ?></h3>
+        <p><?= h(t('company_text')) ?></p>
+        <div class="tiny"><?= h($SITE["email"]) ?></div>
       </div>
 
       <div class="card">
-        <h3>Så fungerar det</h3>
-        <p>1) Ni beskriver behovet → 2) vi föreslår upplägg → 3) bokning/leverans.</p>
-        <a class="btn btn-primary" href="<?= h(site_url("booking.php")) ?>">Boka konsultation</a>
+        <h3><?= h(t('how_it_works')) ?></h3>
+        <p><?= h(t('how_it_works_steps')) ?></p>
+        <a class="btn btn-primary" href="<?= h(site_url("booking.php")) ?>"><?= h(t('book_consultation')) ?></a>
       </div>
     </div>
   </div>

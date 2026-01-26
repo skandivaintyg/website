@@ -1,27 +1,27 @@
 <?php
-$page_title = "FAQ • Frågor & svar";
 require_once __DIR__ . "/includes/header.php";
+$page_title = t('page_title_faq');
 ?>
 
 <section>
   <div class="container">
     <div class="section-title">
-      <h2>Vanliga frågor</h2>
-      <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>">Boka tid</a>
+      <h2><?= h(t('faq_title')) ?></h2>
+      <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>"><?= h(t('nav_booking')) ?></a>
     </div>
 
     <div class="grid-3">
       <div class="card">
-        <h3>Hur snabbt får jag mitt intyg?</h3>
-        <p>Ofta direkt efter besöket om all information är komplett.</p>
+        <h3><?= h(t('faq_q1')) ?></h3>
+        <p><?= h(t('faq_a1')) ?></p>
       </div>
       <div class="card">
-        <h3>Behöver jag ta med något?</h3>
-        <p>Legitimation och eventuella tidigare journal/handlingar om relevant.</p>
+        <h3><?= h(t('faq_q2')) ?></h3>
+        <p><?= h(t('faq_a2')) ?></p>
       </div>
       <div class="card">
-        <h3>Kan ni hjälpa med Transportstyrelsen?</h3>
-        <p>Ja, vi arbetar ofta med krav för körkortsintyg och kompletteringar.</p>
+        <h3><?= h(t('faq_q3')) ?></h3>
+        <p><?= h(t('faq_a3')) ?></p>
       </div>
     </div>
   </div>
