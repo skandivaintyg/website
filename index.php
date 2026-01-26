@@ -8,26 +8,26 @@ require_once __DIR__ . "/includes/header.php";
   <div class="container hero-grid">
     <div>
       <span class="pill">Skandiva Intyg AB</span>
-      <h1>Läkarintyg för Körkortsintyg</h1>
-      <p>Enkelt · Snabbt · Korrekt</p>
+      <h1><?= h(t('hero_title')) ?></h1>
+      <p><?= h(t('hero_subtitle')) ?></p>
 
       <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a class="btn btn-primary" href="<?= h(site_url("booking.php")) ?>">Boka idag</a>
-        <a class="btn btn-outline" href="<?= h(site_url("services.php")) ?>">Våra tjänster</a>
+        <a class="btn btn-primary" href="<?= h(site_url("booking.php")) ?>"><?= h(t('hero_book_today')) ?></a>
+        <a class="btn btn-outline" href="<?= h(site_url("services.php")) ?>"><?= h(t('hero_our_services')) ?></a>
       </div>
 
       <div style="margin-top:14px;">
-        <div class="check"><i>✓</i> Intyg utfärdade av legitimerade läkare</div>
+        <div class="check"><i>✓</i> <?= h(t('hero_licensed_doctors')) ?></div>
       </div>
     </div>
 
-    <aside class="hero-card" aria-label="Kontaktinformation">
-      <h3>Kontaktinformation</h3>
+    <aside class="hero-card" aria-label="<?= h(t('contact_info')) ?>">
+      <h3><?= h(t('contact_info')) ?></h3>
       <div class="contact-list">
-        <div><strong>Telefonnummer:</strong> <?= h($SITE["phone"]) ?></div>
-        <div><strong>Mejladress:</strong> <?= h($SITE["email"]) ?></div>
-        <div><strong>Websida:</strong> <?= h($SITE["website"]) ?></div>
-        <div><strong>Besöksadress:</strong> <?= h($SITE["address"]) ?></div>
+        <div><strong><?= h(t('phone_number')) ?>:</strong> <?= h($SITE["phone"]) ?></div>
+        <div><strong><?= h(t('email_address')) ?>:</strong> <?= h($SITE["email"]) ?></div>
+        <div><strong><?= h(t('website')) ?>:</strong> <?= h($SITE["website"]) ?></div>
+        <div><strong><?= h(t('visiting_address')) ?>:</strong> <?= h($SITE["address"]) ?></div>
       </div>
     </aside>
   </div>
@@ -36,20 +36,12 @@ require_once __DIR__ . "/includes/header.php";
 <section>
   <div class="container">
     <div class="section-title">
-      <h2>Om oss</h2>
+      <h2><?= h(t('about_us')) ?></h2>
     </div>
     <div class="card">
-      <p>
-        Skandiva Intyg drivs av två legitimerade läkare med lång erfarenhet av utfärdande av olika typer av
-        medicinska intyg, inklusive körkortsintyg.
-      </p>
-      <p>
-        Vi har fokus på kvalitet, tillgänglighet och smidig hantering för våra patienter.
-      </p>
-      <p>
-        Vi är baserade i Tranemo och arbetar effektivt för att du ska få ditt intyg snabbt, tryggt och korrekt.
-        Vi erbjuder i vissa fall mobil tjänst och kan anpassa oss för att möta dig på en annan plats.
-      </p>
+      <p><?= h(t('about_text_1')) ?></p>
+      <p><?= h(t('about_text_2')) ?></p>
+      <p><?= h(t('about_text_3')) ?></p>
     </div>
   </div>
 </section>
@@ -57,17 +49,17 @@ require_once __DIR__ . "/includes/header.php";
 <section>
   <div class="container">
     <div class="section-title">
-      <h2>Därför väljer kunder oss</h2>
+      <h2><?= h(t('why_choose_us')) ?></h2>
     </div>
     <div class="card">
-      <p>Vi erbjuder pålitliga medicinska intyg med fokus på kvalitet, tillgänglighet och snabb service.</p>
+      <p><?= h(t('why_choose_intro')) ?></p>
       <div style="display:grid; gap:8px; font-weight:700; color:var(--muted);">
-        <div>✓ Fri konsultation – svar inom 24 timmar</div>
-        <div>✓ Intyg utfärdas samma dag</div>
-        <div>✓ Elektroniska intyg skickas direkt till Transportstyrelsen</div>
-        <div>✓ Tillgängliga och flexibla tider</div>
-        <div>✓ Mobil tjänst vid gruppbokning – Gratis inom närområdet – Extra kostnad tillkommer vid längre avstånd</div>
-        <div>✓ 15 % rabatt vid gruppbokning av 3 personer eller fler</div>
+        <div>✓ <?= h(t('why_1')) ?></div>
+        <div>✓ <?= h(t('why_2')) ?></div>
+        <div>✓ <?= h(t('why_3')) ?></div>
+        <div>✓ <?= h(t('why_4')) ?></div>
+        <div>✓ <?= h(t('why_5')) ?></div>
+        <div>✓ <?= h(t('why_6')) ?></div>
       </div>
     </div>
   </div>
@@ -76,17 +68,17 @@ require_once __DIR__ . "/includes/header.php";
 <section>
   <div class="container">
     <div class="section-title">
-      <h2>Våra tjänster</h2>
+      <h2><?= h(t('our_services')) ?></h2>
     </div>
     <div class="card" style="margin-bottom:14px;">
-      <p>Vi erbjuder ett brett utbud av medicinska intyg som utfärdas effektivt och i enlighet med gällande regelverk.</p>
+      <p><?= h(t('services_intro')) ?></p>
     </div>
 
     <div class="grid-3">
       <?php foreach ($SERVICES as $s): ?>
         <article class="card">
-          <h3><?= h($s["title"]) ?></h3>
-          <p><?= h($s["desc"]) ?></p>
+          <h3><?= h(ts($s["title"], 'title')) ?></h3>
+          <p><?= h(ts($s["title"], 'desc')) ?></p>
           <div class="card-footer">
             <div>
               <div class="price"><?= h($s["price"]) ?></div>
@@ -94,34 +86,34 @@ require_once __DIR__ . "/includes/header.php";
                 <div class="tiny"><?= h($s["time"]) ?></div>
               <?php endif; ?>
             </div>
-            <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>?service=<?= urlencode($s["title"]) ?>">Boka</a>
+            <a class="btn btn-outline" href="<?= h(site_url("booking.php")) ?>?service=<?= urlencode($s["title"]) ?>"><?= h(t('book')) ?></a>
           </div>
         </article>
       <?php endforeach; ?>
     </div>
-    <div class="muted" style="margin-top:12px; font-weight:700;">Andra medicinska intyg vid behov</div>
+    <div class="muted" style="margin-top:12px; font-weight:700;"><?= h(t('other_certificates')) ?></div>
   </div>
 </section>
 
 <section>
   <div class="container">
     <div class="section-title">
-      <h2>Kontakta oss</h2>
+      <h2><?= h(t('contact_us')) ?></h2>
     </div>
     <div class="split">
       <div class="card">
-        <p>Besök vår webbplats eller skanna QR-koden för att boka direkt – vi återkommer samma dag.</p>
+        <p><?= h(t('contact_text')) ?></p>
         <div class="tiny"><?= h($SITE["name"]) ?></div>
-        <div class="tiny"><strong>Boka idag – vi återkommer samma dag</strong></div>
+        <div class="tiny"><strong><?= h(t('book_today_response')) ?></strong></div>
         <div class="price"><?= h($SITE["phone"]) ?></div>
       </div>
       <div class="card">
-        <h3>Kontaktinformation</h3>
+        <h3><?= h(t('contact_info')) ?></h3>
         <div class="contact-list">
-          <div><strong>Telefonnummer:</strong> <?= h($SITE["phone"]) ?></div>
-          <div><strong>Mejladress:</strong> <?= h($SITE["email"]) ?></div>
-          <div><strong>Websida:</strong> <?= h($SITE["website"]) ?></div>
-          <div><strong>Besöksadress:</strong> <?= h($SITE["address"]) ?></div>
+          <div><strong><?= h(t('phone_number')) ?>:</strong> <?= h($SITE["phone"]) ?></div>
+          <div><strong><?= h(t('email_address')) ?>:</strong> <?= h($SITE["email"]) ?></div>
+          <div><strong><?= h(t('website')) ?>:</strong> <?= h($SITE["website"]) ?></div>
+          <div><strong><?= h(t('visiting_address')) ?>:</strong> <?= h($SITE["address"]) ?></div>
         </div>
       </div>
     </div>
@@ -132,11 +124,11 @@ require_once __DIR__ . "/includes/header.php";
   <div class="container">
     <div class="cta" style="margin-top: 10px;">
       <div>
-        <strong>Extra bråttom?</strong>
-        <span>Ring oss så försöker vi hitta en tid som passar – ofta samma dag.</span>
+        <strong><?= h(t('extra_urgent')) ?></strong>
+        <span><?= h(t('call_us_text')) ?></span>
       </div>
-      <a class="btn btn-outline" style="background:rgba(255,255,255,.14); border-color: rgba(255,255,255,.32); color:#fff;" href="tel:+46000000000">
-        📞 Ring nu
+      <a class="btn btn-outline" style="background:rgba(255,255,255,.14); border-color: rgba(255,255,255,.32); color:#fff;" href="tel:0700230023">
+        <?= h(t('call_now')) ?>
       </a>
     </div>
   </div>

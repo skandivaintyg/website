@@ -43,6 +43,6 @@ $LOCATIONS = [
     "city" => "Tranemo",
     "address" => "Street 514",
     "zip" => "514 Tranemo",
-    "phone" => "+46 00 000 000",
+    "phone" => "0700-23-00-23",
   ],
 ];
