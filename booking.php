@@ -1,4 +1,7 @@
 <?php
+require_once __DIR__ . "/includes/config.php";
+require_once __DIR__ . "/includes/functions.php";
+require_once __DIR__ . "/includes/lang.php";
 require_once __DIR__ . "/includes/data.php";
 
 $page_title = t('page_title_booking');
