@@ -1,4 +1,7 @@
 <?php
+require_once __DIR__ . "/includes/config.php";
+require_once __DIR__ . "/includes/functions.php";
+require_once __DIR__ . "/includes/lang.php";
 require_once __DIR__ . "/includes/data.php";
 
 $page_title = t('page_title_booking');
@@ -7,7 +10,7 @@ $form_message = "";
 $form_success = false;
 
 // Handle form submission
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if (($_SERVER["REQUEST_METHOD"] ?? '') === "POST") {
     $service = trim($_POST["service"] ?? "");
     $city = trim($_POST["city"] ?? "");
     $fullname = trim($_POST["fullname"] ?? "");
