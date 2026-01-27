@@ -187,7 +187,6 @@ require_once __DIR__ . "/includes/header.php";
               <input class="input" type="tel" name="phone" placeholder="<?= h(t('phone_placeholder')) ?>" required />
 
               <button class="btn btn-primary" type="submit"><?= h(t('continue')) ?></button>
-              <div class="tiny"><?= h(t('booking_system_hint')) ?></div>
             </form>
           <?php endif; ?>
         </div>
