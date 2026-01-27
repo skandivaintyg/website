@@ -10,7 +10,7 @@ $form_message = "";
 $form_success = false;
 
 // Handle form submission
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if (($_SERVER["REQUEST_METHOD"] ?? '') === "POST") {
     $service = trim($_POST["service"] ?? "");
     $city = trim($_POST["city"] ?? "");
     $fullname = trim($_POST["fullname"] ?? "");
