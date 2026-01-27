@@ -26,7 +26,6 @@ require_once __DIR__ . "/includes/header.php";
       <div class="contact-list">
         <div><strong><?= h(t('phone_number')) ?>:</strong> <?= h($SITE["phone"]) ?></div>
         <div><strong><?= h(t('email_address')) ?>:</strong> <?= h($SITE["email"]) ?></div>
-        <div><strong><?= h(t('website')) ?>:</strong> <?= h($SITE["website"]) ?></div>
         <div><strong><?= h(t('visiting_address')) ?>:</strong> <?= h($SITE["address"]) ?></div>
       </div>
     </aside>
@@ -112,7 +111,6 @@ require_once __DIR__ . "/includes/header.php";
         <div class="contact-list">
           <div><strong><?= h(t('phone_number')) ?>:</strong> <?= h($SITE["phone"]) ?></div>
           <div><strong><?= h(t('email_address')) ?>:</strong> <?= h($SITE["email"]) ?></div>
-          <div><strong><?= h(t('website')) ?>:</strong> <?= h($SITE["website"]) ?></div>
           <div><strong><?= h(t('visiting_address')) ?>:</strong> <?= h($SITE["address"]) ?></div>
         </div>
       </div>
