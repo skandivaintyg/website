@@ -100,6 +100,23 @@ $TRANSLATIONS = [
   'need_appointment_today' => ['sv' => 'Behöver du en tid idag?', 'en' => 'Need an appointment today?'],
   'call_us_solve' => ['sv' => 'Ring oss så försöker vi lösa det.', 'en' => 'Call us and we\'ll try to help.'],
 
+  // Booking form messages
+  'booking_success' => ['sv' => 'Tack för din bokning! En bekräftelse har skickats till din e-post.', 'en' => 'Thank you for your booking! A confirmation has been sent to your email.'],
+  'booking_error' => ['sv' => 'Något gick fel. Vänligen försök igen eller kontakta oss direkt.', 'en' => 'Something went wrong. Please try again or contact us directly.'],
+  'booking_validation_error' => ['sv' => 'Vänligen fyll i alla obligatoriska fält.', 'en' => 'Please fill in all required fields.'],
+  'email_subject' => ['sv' => 'Bokningsbekräftelse - Skandiva Intyg', 'en' => 'Booking Confirmation - Skandiva Intyg'],
+  'email_greeting' => ['sv' => 'Hej', 'en' => 'Hello'],
+  'email_thank_you' => ['sv' => 'Tack för din bokning hos Skandiva Intyg!', 'en' => 'Thank you for your booking with Skandiva Intyg!'],
+  'email_details_header' => ['sv' => 'Här är dina bokningsuppgifter:', 'en' => 'Here are your booking details:'],
+  'email_service' => ['sv' => 'Tjänst', 'en' => 'Service'],
+  'email_location' => ['sv' => 'Plats', 'en' => 'Location'],
+  'email_name' => ['sv' => 'Namn', 'en' => 'Name'],
+  'email_email' => ['sv' => 'E-post', 'en' => 'Email'],
+  'email_phone' => ['sv' => 'Telefon', 'en' => 'Phone'],
+  'email_next_steps' => ['sv' => 'Vi kommer att kontakta dig inom kort för att bekräfta tid och plats.', 'en' => 'We will contact you shortly to confirm time and location.'],
+  'email_questions' => ['sv' => 'Om du har några frågor, kontakta oss gärna:', 'en' => 'If you have any questions, please contact us:'],
+  'email_regards' => ['sv' => 'Med vänliga hälsningar', 'en' => 'Best regards'],
+
   // Company page
   'page_title_company' => ['sv' => 'Företag • Medicinska intyg', 'en' => 'Business • Medical Certificates'],
   'company_title' => ['sv' => 'Företag', 'en' => 'Business'],
