@@ -6,7 +6,7 @@ $SITE = [
   "email" => "info@skandivaintyg.se",
   "booking_cc_email" => "info@skandivaintyg.se",
   "website" => "skandivaintyg.com",
-  "address" => "Street 514, Tranemo, Sweden",
+  "address" => "Tranemo, Västra Götaland",
   "base_path" => "",
   "lang" => "sv",
 ];

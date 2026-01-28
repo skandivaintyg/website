@@ -22,9 +22,7 @@
     <div>
       <div class="footer-title"><?= h(t('footer_locations')) ?></div>
       <div class="footer-list">
-        <a href="<?= h(site_url("booking.php#stockholm")) ?>">Stockholm</a>
-        <a href="<?= h(site_url("booking.php#goteborg")) ?>">Göteborg</a>
-        <a href="<?= h(site_url("booking.php#malmo")) ?>">Malmö</a>
+        <div>Tranemo</div>
       </div>
     </div>
   </div>
